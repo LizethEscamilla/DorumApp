@@ -25,6 +25,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('delete/{id}', [DonorController::class,'destroy']);
     Route::put('/donors/{id}', [DonorController::class, 'update']);
     Route::get('generate-pdf', [DonorController::class, 'generatePDF'])->name('generate-pdf');
+    Route::get('create', [DonorController::class, 'create'])->name('create');
 
     // Rutas del controlador de búsqueda
     Route::get('api/search', [SearchController::class, 'search']);
