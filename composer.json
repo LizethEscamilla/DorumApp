@@ -9,6 +9,8 @@
         "algolia/algoliasearch-client-php": "^4.9",
         "barryvdh/laravel-dompdf": "^3.0",
         "doctrine/dbal": "^4.1",
+        "filament/filament": "^3.2",
+        "filament/tables": "^3.2",
         "laravel/framework": "^11.9",
         "laravel/jetstream": "^5.3",
         "laravel/sanctum": "^4.0",
@@ -41,7 +43,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
